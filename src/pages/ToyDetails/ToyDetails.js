@@ -19,7 +19,6 @@ const ToyDetails = () => {
   }, [toyId]);
   return (
     <>
-      <ToyDetailsBanner toy={toy} />
       <ToyDescription toy={toy} />
     </>
   );

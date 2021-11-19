@@ -8,21 +8,20 @@ import {
     useRouteMatch
 } from "react-router-dom";
 
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, history, useHistory } from "react-router-dom";
 import ManageAllOrders from "../../ManageAllOrders/ManageAllOrders";
 import MakeAdmin from "../../MakeAdmin/MakeAdmin";
-import Pay from "../../Pay/Pay";
+
 
 import AddNewToy from "../../AddNewToy/AddNewToy";
-import MyOrders from "../../MyOrders/MyOrders";
-import AddNewReview from "../../AddNewReview/AddNewReview";
+
 import './Dashboard.css';
 import { AuthContext } from "../../../../store/auth-context";
 import useFirebase from "../../../../hooks/useFirebase";
-import { FaBox } from "react-icons/fa";
+
 import DashboardHome from "../../DashboardHome/DashboardHome";
-import AdminRoute from "../../../Login/AdminRoute/AdminRoute";
 import ManageToys from "../../ManageToys/ManageToys";
+import ToyButton from "../../../../components/ToyButton/ToyButton";
 
 const DashboardAdmin = () => {
 
@@ -34,34 +33,27 @@ const DashboardAdmin = () => {
 
     return (
         <div>
-            <div className="container-fluid fixed-top bg-dark pt-3">
+            <div className="container-fluid fixed-top bg-light pt-3">
                 <div className="row">
                     <div className="col-xl-2 col-sm-3 col-0 collapse show sidebar">
                         <div>
-                            <h3 style={{ color: "white" }}>Dash Board</h3>
+                            <h3 style={{ color: "#679cc1" }}>Dash Board</h3>
                         </div>
                     </div>
                     <div className="col px-5 ms-5" style={{ textAlign: "right" }}>
                         <div>
-                            <button
-                                className="text-white p-2"
-                                style={{
-                                    backgroundColor: "#679cc1",
-                                    border: 0,
-                                    borderRadius: 50,
-                                    paddingLeft: 20,
-                                    paddingRight: 20,
-                                }}
+                            <ToyButton
                                 onClick={logout}
+                                color="green"
                             >
                                 Log Out
-                            </button>
+                            </ToyButton>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container-fluid pt-5">
+            <div className="container-fluid pt-5 link-try">
                 <div className="row vh-100 flex-nowrap">
                     <div className="col-xl-2 col-sm-3 col-auto collapse show sidebar bg-dark px-0" style={{
                         textDecoration: "none",
@@ -72,7 +64,7 @@ const DashboardAdmin = () => {
                     }}>
 
                         <ul
-                            className=" nav flex-column flex-nowrap text-truncate navbar-dark bg-dark mx-auto position-fixed pt-2 vh-100"
+                            className=" nav flex-column flex-nowrap text-truncate navbar-dark bg-light mx-auto position-fixed pt-2 vh-100"
                             id="sidebar"
                         >
                             <NavLink className="nav-link" to="/" style={{
@@ -92,8 +84,8 @@ const DashboardAdmin = () => {
                                     <a className="nav-link" href="#">
                                         <i className="fa fa-cog"></i>
                                         <span className="ml-1 d-none d-sm-inline" style={{
-                                            textDecoration: "none",
-                                            color: "#679cc1"
+                                            color: "#679cc1",
+
                                         }}>&nbsp; Dashboard</span>
                                     </a>
                                 </li>
@@ -104,7 +96,6 @@ const DashboardAdmin = () => {
                                     <a className="nav-link" href="#">
                                         <i className="fa fa-star"></i>
                                         <span className="ml-1 d-none d-sm-inline" style={{
-                                            textDecoration: "none",
                                             color: "#679cc1"
                                         }}>
                                             &nbsp; Make An Admin

@@ -55,6 +55,10 @@ width: auto;
 cursor: default;
 box-shadow: 0 15px 40px #4e4e4e80;
 }
+.link-try a{
+    text-decoration: none;
+    color:#679cc1;
+}
 
 .side-nav-items-upper  a {
 text-decoration: none;

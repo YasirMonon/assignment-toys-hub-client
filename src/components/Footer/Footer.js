@@ -115,7 +115,7 @@ const Footer = () => {
       </div>
 
       <p className={classes.copyright}>
-        Copyright © 2021 All rights reserved | Toys Hub
+        Copyright © 2021 All rights reserved || Toys Hub
       </p>
     </footer>
   );

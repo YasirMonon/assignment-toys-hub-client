@@ -8,6 +8,7 @@ import classes from "./ToyDescription.module.css";
 import { AuthContext } from "../../store/auth-context";
 import { useHistory } from "react-router";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 //Form validation schema
 const schema = yup.object().shape({
   name: yup.string().required("*Name is required!"),
@@ -72,9 +73,14 @@ const ToyDescription = ({ toy }) => {
           <Row className="align-items-center">
             <Col lg={6}>
               <div className={classes["description-content"]}>
-                <h2 className="section-heading-sm">Quick fact</h2>
+                <span></span> <img src={toy.imageCover} alt="toy" />
+                <br />
+                <h2 className="section-heading-sm">Basic Info</h2>
                 <ul>
                   <li className={classes.price}>
+
+                    <span>TOY'S NAME : </span> {toy.name}
+                    <br />
                     <span>PRICE : </span> ${toy.price}
                   </li>
                   <li>
@@ -177,6 +183,8 @@ const ToyDescription = ({ toy }) => {
                   >
                     Book
                   </button>
+                  <br />
+                  <Link to="/" className={classes.booking}>Or , Go Back To Home</Link>
                 </Form>
               </div>
             </Col>

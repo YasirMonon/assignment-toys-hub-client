@@ -33,7 +33,3 @@
 * React Bootstrap
 * JavaScript (ES6)
 * Fontawesome 6 Beta
-
-* Screenshot of Live Site -
-
-![alt text](public/demo.png)

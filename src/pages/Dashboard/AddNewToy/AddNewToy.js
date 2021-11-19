@@ -97,11 +97,11 @@ const AddNewToy = () => {
             </Col>
             <Col md={6}>
               <FloatingLabel
-                label="Toy Image"
+                label="Toy Image (Image Link Only)"
                 className={`${classes.label} mb-3`}
               >
                 <Form.Control
-                  placeholder="Toy Image"
+                  placeholder="Toy Image (Image Link Only)"
                   className={classes.input}
                   {...register("imageCover", { required: true })}
                 />
@@ -121,21 +121,7 @@ const AddNewToy = () => {
                   <small className="error">*Toy Price is required!</small>
                 )}
               </FloatingLabel>
-              {/* <FloatingLabel
-                label="Duration"
-                className={`${classes.label} mb-3`}
-              >
-                <Form.Control
-                  type="number"
-                  min="0"
-                  placeholder="Duration"
-                  className={classes.input}
-                  {...register("duration", { required: true })}
-                />
-                {errors.duration && (
-                  <small className="error">*Toy Duration is required!</small>
-                )}
-              </FloatingLabel> */}
+
               <FloatingLabel label="Rating" className={`${classes.label} mb-3`}>
                 <Form.Control
                   type="number"
@@ -149,20 +135,7 @@ const AddNewToy = () => {
                   <small className="error">*Toy Rating is required!</small>
                 )}
               </FloatingLabel>
-              {/* <FloatingLabel
-                label="Booking Date"
-                className={`${classes.label} mb-3`}
-              >
-                <Form.Control
-                  placeholder="Booking Date"
-                  className={classes.input}
-                  type="date"
-                  {...register("bookingDates", { required: true })}
-                />
-                {errors.startDates && (
-                  <small className="error">*Toy Start Date is required!</small>
-                )}
-              </FloatingLabel> */}
+
               <FloatingLabel
                 label="Delivery Within"
                 className={`${classes.label} mb-3`}
@@ -197,15 +170,3 @@ const AddNewToy = () => {
 };
 
 export default AddNewToy;
-// {
-//   "hosting": {
-//     "public": "build",
-//     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-//     "rewrites": [
-//       {
-//         "source": "**",
-//         "destination": "/index.html"
-//       }
-//     ]
-//   }
-// }
