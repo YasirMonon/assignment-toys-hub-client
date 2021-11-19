@@ -1,0 +1,58 @@
+.banner {
+  height: 80vh;
+  /* background-image:
+    url("https://img.freepik.com/free-photo/overhead-view-colorful-plastic-blocks-white-background_23-2147873802.jpg?size=1100&ext=jpg"); */
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner {
+  height: 95vh;
+}
+.banner-content {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-weight: 400;
+  font-size: 62px;
+  letter-spacing: 1.2rem;
+  margin-bottom: 20px;
+}
+.banner-content h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  margin: 25px 0 35px;
+}
+.banner-content a {
+  text-decoration: none;
+  color: #679cc1;
+}
+@media (max-width: 992px) {
+  .banner {
+    
+  }
+  .banner-content h1 {
+    letter-spacing: 0.8rem;
+    font-size: 48px;
+  }
+  .banner-content h3 {
+    font-size: 28px;
+    letter-spacing: 0.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 38px;
+    letter-spacing: 0.3rem;
+  }
+  .banner-content h3 {
+    font-size: 24px;
+  }
+}
